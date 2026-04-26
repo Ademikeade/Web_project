@@ -1,0 +1,17 @@
+Ademikeade.github.io/
+│
+├── index.html
+├── posts/
+│   ├── post1.html
+│   ├── post2.html
+│   └── post-template.html
+│
+├── assets/
+│   ├── css/
+│   │   └── styles.css
+│   ├── js/
+│   │   └── script.js
+│   └── images/
+│       └── (blog images)
+│
+└── README.md
