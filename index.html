@@ -34,6 +34,33 @@
             <p>Maybe depression has a permanent cure, but it is not seen or no one wants to use it. I think one of the ways to cure depression is to look for the root problem alongside giving anti-depressants. If we can find the root problem and try to solve it or eradicate the problem, there are tendencies depression will reduce.</p>
             <span class="date">April 2026</span>
         </article>
+<div class="comment-section">
+  <h3>Leave a Comment</h3>
+  <textarea id="comment-input" placeholder="What's on your mind?"></textarea>
+  <button id="post-comment">Post Comment</button>
+  <div id="comment-list">
+    <!-- Comments will appear here -->
+  </div>
+</div>
+const commentInput = document.getElementById('comment-input');
+const postButton = document.getElementById('post-comment');
+const commentList = document.getElementById('comment-list');
+
+postButton.addEventListener('click', () => {
+    const text = commentInput.value;
+    
+    if (text.trim() !== "") {
+        const newComment = document.createElement('p');
+        newComment.textContent = text;
+        newComment.style.borderBottom = "1px solid #ccc";
+        newComment.style.padding = "10px 0";
+        
+        commentList.appendChild(newComment);
+        commentInput.value = ""; // Clear the box
+    } else {
+        alert("Please write something first!");
+    }
+});
 
     </section>
 </main>
