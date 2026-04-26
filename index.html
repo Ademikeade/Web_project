@@ -62,6 +62,92 @@ postButton.addEventListener('click', () => {
     }
 });
 
+		/* Comment Section Container */
+.comment-section {
+    margin-top: 50px;
+    padding: 20px;
+    background: rgba(255, 192, 203, 0.1); /* Very light pink background */
+    border-radius: 10px;
+}
+
+/* Header styling */
+.comment-section h3 {
+    color: pink;
+    border-bottom: 2px solid pink;
+    display: inline-block;
+    margin-bottom: 15px;
+}
+
+/* Input Box */
+#comment-input {
+    width: 100%;
+    height: 100px;
+    padding: 12px;
+    border: 2px solid pink;
+    border-radius: 8px;
+    font-family: inherit;
+    display: block;
+    margin-bottom: 10px;
+    box-sizing: border-box; /* Prevents overflow */
+}
+
+/* Submit Button */
+#post-comment {
+    background-color: pink;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: transform 0.2s ease;
+}
+
+#post-comment:hover {
+    transform: scale(1.05); /* Slight pop effect on hover */
+    background-color: #ffb6c1;
+}
+
+/* Individual Comment Styling */
+.comment-item {
+    background: white;
+    padding: 15px;
+    margin-top: 15px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+    color: #333; /* Dark text for readability */
+}
+
+/* Dark Mode Overrides for Comments */
+body.dark .comment-item {
+    background: #222;
+    color: #eee;
+    box-shadow: 0 2px 5px rgba(255,192,203,0.1);
+}
+
+body.dark #comment-input {
+    background: #1a1a1a;
+    color: white;
+}
+const commentInput = document.getElementById('comment-input');
+const postButton = document.getElementById('post-comment');
+const commentList = document.getElementById('comment-list');
+
+postButton.addEventListener('click', () => {
+    const text = commentInput.value;
+    
+    if (text.trim() !== "") {
+        const newComment = document.createElement('div');
+        newComment.className = 'comment-item'; // Applies the new styles
+        newComment.textContent = text;
+        
+        // Add at the top of the list
+        commentList.prepend(newComment);
+        
+        commentInput.value = ""; 
+    }
+});
+
     </section>
 </main>
 
