@@ -127,6 +127,13 @@
 </footer>
 
 <script src="../assets/js/script.js"></script>
+	const toggleButton = document.getElementById('theme-toggle');
+
+toggleButton.addEventListener('click', () => {
+    // This flips the 'dark' class on and off for the body tag
+    document.body.classList.toggle('dark');
+});
+
 </body>
 </html>
 
@@ -201,3 +208,14 @@ footer {
     color: browm;
     margin-top: 40px;
 }
+
+// Dark mode toggle
+const themeToggle = document.getElementById("themeToggle");
+themeToggle.addEventListener("click", () => {
+    document.body.classList.toggle("dark");
+});
+
+<nav>
+  <a href="#">Home</a>
+  <button id="theme-toggle">Switch Theme</button>
+</nav>
