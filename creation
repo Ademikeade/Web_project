@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Late night thoughts and reflections from My Opinion.">
+    <title>My Opinion | Thoughts</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <div class="container header-content">
+            <div class="logo">
+                <img src="logo.png" alt="My Opinion Logo" width="150">
+            </div>
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="feelings.html">Feelings</a></li>
+                    <li><a href="thoughts.html" class="active">Thoughts</a></li>
+                    <li><a href="about.html">About Me</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+        <h1>Late Night Thoughts</h1>
+        <p>A collection of deeper reflections and philosophical questions.</p>
+
+        <!-- Requirement: HTML Table Element -->
+        <section class="table-section">
+            <h2>Post Archive</h2>
+            <table class="styled-table">
+                <thead>
+                    <tr>
+                        <th>Date</th>
+                        <th>Topic</th>
+                        <th>Status</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>April 12, 2026</td>
+                        <td>The Root of Depression</td>
+                        <td>Published</td>
+                    </tr>
+                    <tr>
+                        <td>April 15, 2026</td>
+                        <td>Curiosity and Boredom</td>
+                        <td>Published</td>
+                    </tr>
+                    <tr>
+                        <td>May 01, 2026</td>
+                        <td>Future Perspectives</td>
+                        <td>Draft</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <!-- Requirement: At least three images total (2 of 3) -->
+        <section>
+            <img src="thinking.jpg" alt="A foggy mountain landscape representing deep thought" class="fluid-img">
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 My Opinion. All rights reserved.</p>
+            <!-- Requirement: External Links (2 of 3) -->
+            <p>Read more on <a href="https://psychologytoday.com" target="_blank">Psychology Today</a>.</p>
+        </div>
+    </footer>
+
+</body>
+</html>
