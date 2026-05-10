@@ -65,3 +65,102 @@
 
 </body>
 </html>
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Contact My Opinion - We would love to hear from you.">
+    <title>My Opinion | Contact Us</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <div class="container header-content">
+            <div class="logo">
+                <!-- Placeholder for logo image -->
+                <img src="logo.png" alt="My Opinion Logo" width="150">
+            </div>
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="feelings.html">Feelings</a></li>
+                    <li><a href="thoughts.html">Thoughts</a></li>
+                    <li><a href="about.html">About Me</a></li>
+                    <li><a href="contact.html" class="active">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+        <h1>Contact Us</h1>
+        <p>Have questions or want to share your own opinion? Send us a message!</p>
+
+        <!-- Requirement: HTML Form Element -->
+        <form id="contact-form" class="styled-form">
+            <div class="form-group">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="subject">Subject:</label>
+                <select id="subject" name="subject">
+                    <option value="general">General Inquiry</option>
+                    <option value="feedback">Feedback</option>
+                    <option value="story">Share a Story</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" rows="5" required></textarea>
+            </div>
+
+            <button type="submit" class="btn-submit">Send Message</button>
+        </form>
+
+        <div id="form-response" class="hidden"></div>
+    </main>
+
+    <!-- Requirement: Script for processing form data -->
+    <script>
+        document.getElementById('contact-form').addEventListener('submit', function(event) {
+            event.preventDefault(); // Prevents page reload
+            
+            // Collect form data
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            const message = document.getElementById('message').value;
+
+            // Simple processing logic
+            const responseDiv = document.getElementById('form-response');
+            responseDiv.innerHTML = `<p>Thank you, <strong>${name}</strong>! Your message regarding "${document.getElementById('subject').value}" has been received. We'll contact you at <em>${email}</em> soon.</p>`;
+            responseDiv.classList.remove('hidden');
+            responseDiv.style.backgroundColor = "#e7f3fe";
+            responseDiv.style.padding = "15px";
+            responseDiv.style.marginTop = "20px";
+            responseDiv.style.borderLeft = "6px solid #2196F3";
+
+            // Clear form fields
+            this.reset();
+        });
+    </script>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 My Opinion. All rights reserved.</p>
+        </div>
+    </footer>
+
+</body>
+</html>
